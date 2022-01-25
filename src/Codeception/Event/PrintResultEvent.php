@@ -11,14 +11,9 @@ use Symfony\Contracts\EventDispatcher\Event;
 class PrintResultEvent extends Event
 {
     public function __construct(
-        protected TestResult $testResult,
-        protected Printer $printer)
+        protected TestResult $testResult
+    )
     {
-    }
-
-    public function getPrinter(): Printer
-    {
-        return $this->printer;
     }
 
     public function getResult(): TestResult
